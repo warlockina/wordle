@@ -21,9 +21,12 @@ namespace wordle
     {
 
         List<Label> letterLabel = new List<Label>();
+        List<Label> keyLabel = new List<Label>();
+
         int curCol = 0, curRow = 0;
         int guesses = 1;
         string word = "";
+
         HashSet<string> wordList = new HashSet<string>();
         private Dictionary<Label, Point> labelOffsets = new Dictionary<Label, Point>();
         private Point titleOffset = new Point();
@@ -32,14 +35,20 @@ namespace wordle
         {
             InitializeComponent();
 
-            //add labels to letterLabel List
-            for(int i=1; i<=25; i++)
+            //add labels to letterLabel and keyLabel List
+            for (int i = 1; i <= 25; i++)
             {
                 Control[] found = this.Controls.Find("label" + i, false); //false - ca sa nu mearga recursiv IN continut
                 letterLabel.Add((Label)found[0]);
             }
 
-            //
+            for(char i = 'A'; i <= 'Z'; i++)
+            {
+                Control[] found = this.Controls.Find("keyLabel" + i, false);
+                keyLabel.Add((Label)found[0]);
+            }
+
+            //mark label offsets
             int centerX = this.ClientSize.Width / 2;
             titleOffset.X = lblTitle.Location.X;
             titleOffset.Y = lblTitle.Location.Y;
@@ -62,7 +71,7 @@ namespace wordle
 
             int modif = lblTitle.Size.Width / 2;
             lblTitle.Location = new Point(centerX - modif, lblTitle.Location.Y);
-        } 
+        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -93,10 +102,10 @@ namespace wordle
             }
             element = rndNum.Next(0, wordList.Count);
             word = wordList.ElementAt(element);
-            
+
             //word = "GRASS";
             //MessageBox.Show("The word is: " + word); //check when running
-            
+
             try
             {
                 string[] allwords = File.ReadAllLines("validWord.txt");
@@ -198,6 +207,7 @@ namespace wordle
                 {
                     //letter is good :), pos is good :)
                     letterLabel[startIndex + i].BackColor = Color.Green;
+                    keyLabel[tempGuess[i] - 65].BackColor = Color.Green;
                     matchIndex[i] = true;
                     matchedInGuess[i] = true;
                     matchedInWord[i] = true;
@@ -214,6 +224,9 @@ namespace wordle
                         {
                             //letter is good :), pos is bad :(
                             letterLabel[startIndex + i].BackColor = Color.Gold;
+                            if(keyLabel[tempGuess[i] - 65].BackColor != Color.Green) 
+                                keyLabel[tempGuess[i] - 65].BackColor = Color.Gold;
+
                             matchedInGuess[i] = true;
                             matchedInWord[j] = true;
                             break;
@@ -222,6 +235,7 @@ namespace wordle
                     if (!matchedInGuess[i]) //letter bad :(
                     {
                         letterLabel[startIndex + i].BackColor = Color.DimGray;
+                        keyLabel[tempGuess[i] - 65].BackColor = Color.DimGray;
                     }
                 }
             }
@@ -270,6 +284,5 @@ namespace wordle
             }
 
         }
-
     }
 }

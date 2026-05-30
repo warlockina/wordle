@@ -56,6 +56,32 @@
             label21 = new Label();
             keyLabelQ = new Label();
             keyLabelW = new Label();
+            keyLabelE = new Label();
+            keyLabelR = new Label();
+            keyLabelT = new Label();
+            keyLabelY = new Label();
+            keyLabelU = new Label();
+            keyLabelI = new Label();
+            keyLabelO = new Label();
+            keyLabelP = new Label();
+            keyLabelA = new Label();
+            keyLabelS = new Label();
+            keyLabelD = new Label();
+            keyLabelF = new Label();
+            keyLabelG = new Label();
+            keyLabelH = new Label();
+            keyLabelJ = new Label();
+            keyLabelK = new Label();
+            keyLabelL = new Label();
+            keyLabelZ = new Label();
+            keyLabelX = new Label();
+            keyLabelC = new Label();
+            keyLabelV = new Label();
+            keyLabelB = new Label();
+            keyLabelN = new Label();
+            keyLabelM = new Label();
+            labelBack = new Label();
+            labelEnter = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -72,7 +98,7 @@
             // 
             // label1
             // 
-            label1.BackColor = Color.Gray;
+            label1.BackColor = Color.DarkGray;
             label1.Font = new Font("Arial", 24F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(55, 80);
@@ -84,7 +110,7 @@
             // 
             // label2
             // 
-            label2.BackColor = Color.Gray;
+            label2.BackColor = Color.DarkGray;
             label2.Font = new Font("Arial", 24F, FontStyle.Bold);
             label2.ForeColor = Color.White;
             label2.Location = new Point(115, 80);
@@ -96,7 +122,7 @@
             // 
             // label3
             // 
-            label3.BackColor = Color.Gray;
+            label3.BackColor = Color.DarkGray;
             label3.Font = new Font("Arial", 24F, FontStyle.Bold);
             label3.ForeColor = Color.White;
             label3.Location = new Point(175, 80);
@@ -108,7 +134,7 @@
             // 
             // label4
             // 
-            label4.BackColor = Color.Gray;
+            label4.BackColor = Color.DarkGray;
             label4.Font = new Font("Arial", 24F, FontStyle.Bold);
             label4.ForeColor = Color.White;
             label4.Location = new Point(235, 80);
@@ -120,7 +146,7 @@
             // 
             // label5
             // 
-            label5.BackColor = Color.Gray;
+            label5.BackColor = Color.DarkGray;
             label5.Font = new Font("Arial", 24F, FontStyle.Bold);
             label5.ForeColor = Color.White;
             label5.Location = new Point(295, 80);
@@ -132,7 +158,7 @@
             // 
             // label10
             // 
-            label10.BackColor = Color.Gray;
+            label10.BackColor = Color.DarkGray;
             label10.Font = new Font("Arial", 24F, FontStyle.Bold);
             label10.ForeColor = Color.White;
             label10.Location = new Point(295, 145);
@@ -144,7 +170,7 @@
             // 
             // label9
             // 
-            label9.BackColor = Color.Gray;
+            label9.BackColor = Color.DarkGray;
             label9.Font = new Font("Arial", 24F, FontStyle.Bold);
             label9.ForeColor = Color.White;
             label9.Location = new Point(235, 145);
@@ -156,7 +182,7 @@
             // 
             // label8
             // 
-            label8.BackColor = Color.Gray;
+            label8.BackColor = Color.DarkGray;
             label8.Font = new Font("Arial", 24F, FontStyle.Bold);
             label8.ForeColor = Color.White;
             label8.Location = new Point(175, 145);
@@ -168,7 +194,7 @@
             // 
             // label7
             // 
-            label7.BackColor = Color.Gray;
+            label7.BackColor = Color.DarkGray;
             label7.Font = new Font("Arial", 24F, FontStyle.Bold);
             label7.ForeColor = Color.White;
             label7.Location = new Point(115, 145);
@@ -180,7 +206,7 @@
             // 
             // label6
             // 
-            label6.BackColor = Color.Gray;
+            label6.BackColor = Color.DarkGray;
             label6.Font = new Font("Arial", 24F, FontStyle.Bold);
             label6.ForeColor = Color.White;
             label6.Location = new Point(55, 145);
@@ -192,7 +218,7 @@
             // 
             // label15
             // 
-            label15.BackColor = Color.Gray;
+            label15.BackColor = Color.DarkGray;
             label15.Font = new Font("Arial", 24F, FontStyle.Bold);
             label15.ForeColor = Color.White;
             label15.Location = new Point(295, 210);
@@ -204,7 +230,7 @@
             // 
             // label14
             // 
-            label14.BackColor = Color.Gray;
+            label14.BackColor = Color.DarkGray;
             label14.Font = new Font("Arial", 24F, FontStyle.Bold);
             label14.ForeColor = Color.White;
             label14.Location = new Point(235, 210);
@@ -216,7 +242,7 @@
             // 
             // label13
             // 
-            label13.BackColor = Color.Gray;
+            label13.BackColor = Color.DarkGray;
             label13.Font = new Font("Arial", 24F, FontStyle.Bold);
             label13.ForeColor = Color.White;
             label13.Location = new Point(175, 210);
@@ -228,7 +254,7 @@
             // 
             // label12
             // 
-            label12.BackColor = Color.Gray;
+            label12.BackColor = Color.DarkGray;
             label12.Font = new Font("Arial", 24F, FontStyle.Bold);
             label12.ForeColor = Color.White;
             label12.Location = new Point(115, 210);
@@ -240,7 +266,7 @@
             // 
             // label11
             // 
-            label11.BackColor = Color.Gray;
+            label11.BackColor = Color.DarkGray;
             label11.Font = new Font("Arial", 24F, FontStyle.Bold);
             label11.ForeColor = Color.White;
             label11.Location = new Point(55, 210);
@@ -252,7 +278,7 @@
             // 
             // label20
             // 
-            label20.BackColor = Color.Gray;
+            label20.BackColor = Color.DarkGray;
             label20.Font = new Font("Arial", 24F, FontStyle.Bold);
             label20.ForeColor = Color.White;
             label20.Location = new Point(295, 275);
@@ -264,7 +290,7 @@
             // 
             // label19
             // 
-            label19.BackColor = Color.Gray;
+            label19.BackColor = Color.DarkGray;
             label19.Font = new Font("Arial", 24F, FontStyle.Bold);
             label19.ForeColor = Color.White;
             label19.Location = new Point(235, 275);
@@ -276,7 +302,7 @@
             // 
             // label18
             // 
-            label18.BackColor = Color.Gray;
+            label18.BackColor = Color.DarkGray;
             label18.Font = new Font("Arial", 24F, FontStyle.Bold);
             label18.ForeColor = Color.White;
             label18.Location = new Point(175, 275);
@@ -288,7 +314,7 @@
             // 
             // label17
             // 
-            label17.BackColor = Color.Gray;
+            label17.BackColor = Color.DarkGray;
             label17.Font = new Font("Arial", 24F, FontStyle.Bold);
             label17.ForeColor = Color.White;
             label17.Location = new Point(115, 275);
@@ -300,7 +326,7 @@
             // 
             // label16
             // 
-            label16.BackColor = Color.Gray;
+            label16.BackColor = Color.DarkGray;
             label16.Font = new Font("Arial", 24F, FontStyle.Bold);
             label16.ForeColor = Color.White;
             label16.Location = new Point(55, 275);
@@ -312,7 +338,7 @@
             // 
             // label25
             // 
-            label25.BackColor = Color.Gray;
+            label25.BackColor = Color.DarkGray;
             label25.Font = new Font("Arial", 24F, FontStyle.Bold);
             label25.ForeColor = Color.White;
             label25.Location = new Point(295, 340);
@@ -324,7 +350,7 @@
             // 
             // label24
             // 
-            label24.BackColor = Color.Gray;
+            label24.BackColor = Color.DarkGray;
             label24.Font = new Font("Arial", 24F, FontStyle.Bold);
             label24.ForeColor = Color.White;
             label24.Location = new Point(235, 340);
@@ -336,7 +362,7 @@
             // 
             // label23
             // 
-            label23.BackColor = Color.Gray;
+            label23.BackColor = Color.DarkGray;
             label23.Font = new Font("Arial", 24F, FontStyle.Bold);
             label23.ForeColor = Color.White;
             label23.Location = new Point(175, 340);
@@ -348,7 +374,7 @@
             // 
             // label22
             // 
-            label22.BackColor = Color.Gray;
+            label22.BackColor = Color.DarkGray;
             label22.Font = new Font("Arial", 24F, FontStyle.Bold);
             label22.ForeColor = Color.White;
             label22.Location = new Point(115, 340);
@@ -360,7 +386,7 @@
             // 
             // label21
             // 
-            label21.BackColor = Color.Gray;
+            label21.BackColor = Color.DarkGray;
             label21.Font = new Font("Arial", 24F, FontStyle.Bold);
             label21.ForeColor = Color.White;
             label21.Location = new Point(55, 340);
@@ -372,7 +398,7 @@
             // 
             // keyLabelQ
             // 
-            keyLabelQ.BackColor = Color.Gray;
+            keyLabelQ.BackColor = Color.DarkGray;
             keyLabelQ.Font = new Font("Arial", 24F, FontStyle.Bold);
             keyLabelQ.ForeColor = Color.White;
             keyLabelQ.Location = new Point(12, 450);
@@ -384,7 +410,7 @@
             // 
             // keyLabelW
             // 
-            keyLabelW.BackColor = Color.Gray;
+            keyLabelW.BackColor = Color.DarkGray;
             keyLabelW.Font = new Font("Arial", 24F, FontStyle.Bold);
             keyLabelW.ForeColor = Color.White;
             keyLabelW.Location = new Point(68, 450);
@@ -394,12 +420,350 @@
             keyLabelW.Text = "W";
             keyLabelW.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // keyLabelE
+            // 
+            keyLabelE.BackColor = Color.DarkGray;
+            keyLabelE.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelE.ForeColor = Color.White;
+            keyLabelE.Location = new Point(124, 450);
+            keyLabelE.Name = "keyLabelE";
+            keyLabelE.Size = new Size(50, 50);
+            keyLabelE.TabIndex = 28;
+            keyLabelE.Text = "E";
+            keyLabelE.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelR
+            // 
+            keyLabelR.BackColor = Color.DarkGray;
+            keyLabelR.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelR.ForeColor = Color.White;
+            keyLabelR.Location = new Point(180, 450);
+            keyLabelR.Name = "keyLabelR";
+            keyLabelR.Size = new Size(50, 50);
+            keyLabelR.TabIndex = 29;
+            keyLabelR.Text = "R";
+            keyLabelR.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelT
+            // 
+            keyLabelT.BackColor = Color.DarkGray;
+            keyLabelT.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelT.ForeColor = Color.White;
+            keyLabelT.Location = new Point(236, 450);
+            keyLabelT.Name = "keyLabelT";
+            keyLabelT.Size = new Size(50, 50);
+            keyLabelT.TabIndex = 30;
+            keyLabelT.Text = "T";
+            keyLabelT.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelY
+            // 
+            keyLabelY.BackColor = Color.DarkGray;
+            keyLabelY.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelY.ForeColor = Color.White;
+            keyLabelY.Location = new Point(292, 450);
+            keyLabelY.Name = "keyLabelY";
+            keyLabelY.Size = new Size(50, 50);
+            keyLabelY.TabIndex = 31;
+            keyLabelY.Text = "Y";
+            keyLabelY.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelU
+            // 
+            keyLabelU.BackColor = Color.DarkGray;
+            keyLabelU.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelU.ForeColor = Color.White;
+            keyLabelU.Location = new Point(348, 450);
+            keyLabelU.Name = "keyLabelU";
+            keyLabelU.Size = new Size(50, 50);
+            keyLabelU.TabIndex = 32;
+            keyLabelU.Text = "U";
+            keyLabelU.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelI
+            // 
+            keyLabelI.BackColor = Color.DarkGray;
+            keyLabelI.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelI.ForeColor = Color.White;
+            keyLabelI.Location = new Point(404, 450);
+            keyLabelI.Name = "keyLabelI";
+            keyLabelI.Size = new Size(50, 50);
+            keyLabelI.TabIndex = 33;
+            keyLabelI.Text = "I";
+            keyLabelI.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelO
+            // 
+            keyLabelO.BackColor = Color.DarkGray;
+            keyLabelO.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelO.ForeColor = Color.White;
+            keyLabelO.Location = new Point(460, 450);
+            keyLabelO.Name = "keyLabelO";
+            keyLabelO.Size = new Size(50, 50);
+            keyLabelO.TabIndex = 34;
+            keyLabelO.Text = "O";
+            keyLabelO.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelP
+            // 
+            keyLabelP.BackColor = Color.DarkGray;
+            keyLabelP.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelP.ForeColor = Color.White;
+            keyLabelP.Location = new Point(516, 450);
+            keyLabelP.Name = "keyLabelP";
+            keyLabelP.Size = new Size(50, 50);
+            keyLabelP.TabIndex = 35;
+            keyLabelP.Text = "P";
+            keyLabelP.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelA
+            // 
+            keyLabelA.BackColor = Color.DarkGray;
+            keyLabelA.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelA.ForeColor = Color.White;
+            keyLabelA.Location = new Point(40, 509);
+            keyLabelA.Name = "keyLabelA";
+            keyLabelA.Size = new Size(50, 50);
+            keyLabelA.TabIndex = 36;
+            keyLabelA.Text = "A";
+            keyLabelA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelS
+            // 
+            keyLabelS.BackColor = Color.DarkGray;
+            keyLabelS.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelS.ForeColor = Color.White;
+            keyLabelS.Location = new Point(96, 509);
+            keyLabelS.Name = "keyLabelS";
+            keyLabelS.Size = new Size(50, 50);
+            keyLabelS.TabIndex = 37;
+            keyLabelS.Text = "S";
+            keyLabelS.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelD
+            // 
+            keyLabelD.BackColor = Color.DarkGray;
+            keyLabelD.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelD.ForeColor = Color.White;
+            keyLabelD.Location = new Point(152, 509);
+            keyLabelD.Name = "keyLabelD";
+            keyLabelD.Size = new Size(50, 50);
+            keyLabelD.TabIndex = 38;
+            keyLabelD.Text = "D";
+            keyLabelD.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelF
+            // 
+            keyLabelF.BackColor = Color.DarkGray;
+            keyLabelF.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelF.ForeColor = Color.White;
+            keyLabelF.Location = new Point(208, 509);
+            keyLabelF.Name = "keyLabelF";
+            keyLabelF.Size = new Size(50, 50);
+            keyLabelF.TabIndex = 39;
+            keyLabelF.Text = "F";
+            keyLabelF.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelG
+            // 
+            keyLabelG.BackColor = Color.DarkGray;
+            keyLabelG.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelG.ForeColor = Color.White;
+            keyLabelG.Location = new Point(264, 509);
+            keyLabelG.Name = "keyLabelG";
+            keyLabelG.Size = new Size(50, 50);
+            keyLabelG.TabIndex = 40;
+            keyLabelG.Text = "G";
+            keyLabelG.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelH
+            // 
+            keyLabelH.BackColor = Color.DarkGray;
+            keyLabelH.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelH.ForeColor = Color.White;
+            keyLabelH.Location = new Point(320, 509);
+            keyLabelH.Name = "keyLabelH";
+            keyLabelH.Size = new Size(50, 50);
+            keyLabelH.TabIndex = 41;
+            keyLabelH.Text = "H";
+            keyLabelH.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelJ
+            // 
+            keyLabelJ.BackColor = Color.DarkGray;
+            keyLabelJ.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelJ.ForeColor = Color.White;
+            keyLabelJ.Location = new Point(376, 509);
+            keyLabelJ.Name = "keyLabelJ";
+            keyLabelJ.Size = new Size(50, 50);
+            keyLabelJ.TabIndex = 42;
+            keyLabelJ.Text = "J";
+            keyLabelJ.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelK
+            // 
+            keyLabelK.BackColor = Color.DarkGray;
+            keyLabelK.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelK.ForeColor = Color.White;
+            keyLabelK.Location = new Point(432, 509);
+            keyLabelK.Name = "keyLabelK";
+            keyLabelK.Size = new Size(50, 50);
+            keyLabelK.TabIndex = 43;
+            keyLabelK.Text = "K";
+            keyLabelK.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelL
+            // 
+            keyLabelL.BackColor = Color.DarkGray;
+            keyLabelL.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelL.ForeColor = Color.White;
+            keyLabelL.Location = new Point(488, 509);
+            keyLabelL.Name = "keyLabelL";
+            keyLabelL.Size = new Size(50, 50);
+            keyLabelL.TabIndex = 44;
+            keyLabelL.Text = "L";
+            keyLabelL.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelZ
+            // 
+            keyLabelZ.BackColor = Color.DarkGray;
+            keyLabelZ.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelZ.ForeColor = Color.White;
+            keyLabelZ.Location = new Point(96, 568);
+            keyLabelZ.Name = "keyLabelZ";
+            keyLabelZ.Size = new Size(50, 50);
+            keyLabelZ.TabIndex = 45;
+            keyLabelZ.Text = "Z";
+            keyLabelZ.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelX
+            // 
+            keyLabelX.BackColor = Color.DarkGray;
+            keyLabelX.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelX.ForeColor = Color.White;
+            keyLabelX.Location = new Point(152, 568);
+            keyLabelX.Name = "keyLabelX";
+            keyLabelX.Size = new Size(50, 50);
+            keyLabelX.TabIndex = 46;
+            keyLabelX.Text = "X";
+            keyLabelX.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelC
+            // 
+            keyLabelC.BackColor = Color.DarkGray;
+            keyLabelC.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelC.ForeColor = Color.White;
+            keyLabelC.Location = new Point(208, 568);
+            keyLabelC.Name = "keyLabelC";
+            keyLabelC.Size = new Size(50, 50);
+            keyLabelC.TabIndex = 47;
+            keyLabelC.Text = "C";
+            keyLabelC.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelV
+            // 
+            keyLabelV.BackColor = Color.DarkGray;
+            keyLabelV.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelV.ForeColor = Color.White;
+            keyLabelV.Location = new Point(264, 568);
+            keyLabelV.Name = "keyLabelV";
+            keyLabelV.Size = new Size(50, 50);
+            keyLabelV.TabIndex = 48;
+            keyLabelV.Text = "V";
+            keyLabelV.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelB
+            // 
+            keyLabelB.BackColor = Color.DarkGray;
+            keyLabelB.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelB.ForeColor = Color.White;
+            keyLabelB.Location = new Point(320, 568);
+            keyLabelB.Name = "keyLabelB";
+            keyLabelB.Size = new Size(50, 50);
+            keyLabelB.TabIndex = 49;
+            keyLabelB.Text = "B";
+            keyLabelB.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelN
+            // 
+            keyLabelN.BackColor = Color.DarkGray;
+            keyLabelN.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelN.ForeColor = Color.White;
+            keyLabelN.Location = new Point(376, 568);
+            keyLabelN.Name = "keyLabelN";
+            keyLabelN.Size = new Size(50, 50);
+            keyLabelN.TabIndex = 50;
+            keyLabelN.Text = "N";
+            keyLabelN.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // keyLabelM
+            // 
+            keyLabelM.BackColor = Color.DarkGray;
+            keyLabelM.Font = new Font("Arial", 24F, FontStyle.Bold);
+            keyLabelM.ForeColor = Color.White;
+            keyLabelM.Location = new Point(432, 568);
+            keyLabelM.Name = "keyLabelM";
+            keyLabelM.Size = new Size(50, 50);
+            keyLabelM.TabIndex = 51;
+            keyLabelM.Text = "M";
+            keyLabelM.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelBack
+            // 
+            labelBack.BackColor = Color.DarkGray;
+            labelBack.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelBack.ForeColor = Color.White;
+            labelBack.Location = new Point(488, 568);
+            labelBack.Name = "labelBack";
+            labelBack.Size = new Size(78, 50);
+            labelBack.TabIndex = 52;
+            labelBack.Text = "BACK";
+            labelBack.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // labelEnter
+            // 
+            labelEnter.BackColor = Color.DarkGray;
+            labelEnter.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelEnter.ForeColor = Color.White;
+            labelEnter.Location = new Point(12, 568);
+            labelEnter.Name = "labelEnter";
+            labelEnter.Size = new Size(78, 50);
+            labelEnter.TabIndex = 53;
+            labelEnter.Text = "ENTER";
+            labelEnter.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(589, 670);
+            Controls.Add(labelEnter);
+            Controls.Add(labelBack);
+            Controls.Add(keyLabelM);
+            Controls.Add(keyLabelN);
+            Controls.Add(keyLabelB);
+            Controls.Add(keyLabelV);
+            Controls.Add(keyLabelC);
+            Controls.Add(keyLabelX);
+            Controls.Add(keyLabelZ);
+            Controls.Add(keyLabelL);
+            Controls.Add(keyLabelK);
+            Controls.Add(keyLabelJ);
+            Controls.Add(keyLabelH);
+            Controls.Add(keyLabelG);
+            Controls.Add(keyLabelF);
+            Controls.Add(keyLabelD);
+            Controls.Add(keyLabelS);
+            Controls.Add(keyLabelA);
+            Controls.Add(keyLabelP);
+            Controls.Add(keyLabelO);
+            Controls.Add(keyLabelI);
+            Controls.Add(keyLabelU);
+            Controls.Add(keyLabelY);
+            Controls.Add(keyLabelT);
+            Controls.Add(keyLabelR);
+            Controls.Add(keyLabelE);
             Controls.Add(keyLabelW);
             Controls.Add(keyLabelQ);
             Controls.Add(label25);
@@ -465,5 +829,31 @@
         private Label label21;
         private Label keyLabelQ;
         private Label keyLabelW;
+        private Label keyLabelE;
+        private Label keyLabelR;
+        private Label keyLabelT;
+        private Label keyLabelY;
+        private Label keyLabelU;
+        private Label keyLabelI;
+        private Label keyLabelO;
+        private Label keyLabelP;
+        private Label keyLabelA;
+        private Label keyLabelS;
+        private Label keyLabelD;
+        private Label keyLabelF;
+        private Label keyLabelG;
+        private Label keyLabelH;
+        private Label keyLabelJ;
+        private Label keyLabelK;
+        private Label keyLabelL;
+        private Label keyLabelZ;
+        private Label keyLabelX;
+        private Label keyLabelC;
+        private Label keyLabelV;
+        private Label keyLabelB;
+        private Label keyLabelN;
+        private Label keyLabelM;
+        private Label labelBack;
+        private Label labelEnter;
     }
 }
