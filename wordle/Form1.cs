@@ -9,12 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/* NOTES *
- * 400x500 original window size jsyk
- * 
- * 
- * 
-*/
 namespace wordle
 {
     public partial class frmMain : Form
@@ -30,6 +24,9 @@ namespace wordle
         HashSet<string> wordList = new HashSet<string>();
         private Dictionary<Label, Point> labelOffsets = new Dictionary<Label, Point>();
         private Point titleOffset = new Point();
+        private Point btnOffset = new Point();
+
+        bool isDarkTheme = true;
 
         public frmMain()
         {
@@ -42,21 +39,25 @@ namespace wordle
                 letterLabel.Add((Label)found[0]);
             }
 
-            for(char i = 'A'; i <= 'Z'; i++)
+            for (char i = 'A'; i <= 'Z'; i++)
             {
                 Control[] found = this.Controls.Find("keyLabel" + i, false);
                 keyLabel.Add((Label)found[0]);
             }
+            keyLabel.Add(labelEnter);
+            keyLabel.Add(labelBack);
 
             //mark label offsets
             int centerX = this.ClientSize.Width / 2;
             titleOffset.X = lblTitle.Location.X;
             titleOffset.Y = lblTitle.Location.Y;
+            btnOffset.X = btnTheme.Location.X;
+            btnOffset.Y = btnTheme.Location.Y;
             foreach (Label lbl in letterLabel)
                 labelOffsets[lbl] = new Point(lbl.Location.X - centerX, lbl.Location.Y);
-
-            ///////
-            //generateLabels();
+            foreach (Label lbl in keyLabel)
+                labelOffsets[lbl] = new Point(lbl.Location.X - centerX, lbl.Location.Y);
+            
             loadWords();
             this.KeyPress += frmMain_KeyPress;
             this.KeyPreview = true;
@@ -64,21 +65,63 @@ namespace wordle
         }
 
         private void frmMain_Resize(object sender, EventArgs e)
-        { //vezi cu centratul casutelor
+        {
             int centerX = this.ClientSize.Width / 2;
-            foreach (Label lbl in letterLabel) //(-10) pt SPACING
-                lbl.Location = new Point(labelOffsets[lbl].X + centerX, labelOffsets[lbl].Y);
+
+            foreach (var entry in labelOffsets)
+                entry.Key.Location = new Point(entry.Value.X + centerX, entry.Value.Y);
 
             int modif = lblTitle.Size.Width / 2;
             lblTitle.Location = new Point(centerX - modif, lblTitle.Location.Y);
+
+            modif = centerX - btnTheme.Size.Width - btnTheme.Location.X;
+            btnTheme.Location = new Point(centerX - modif + btnTheme.Size.Width, btnTheme.Location.Y);
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
+        private void ApplyTheme()
         {
+            Color background, foreground, lblBack, keyBack, title;
+            if (isDarkTheme)
+            {
+                background = Color.Black;
+                foreground = Color.White;
+                lblBack = Color.DarkGray;
+                keyBack = Color.DarkGray;
+                title = Color.Gold;
+            }
+            else
+            {
+                background = Color.White;
+                foreground = Color.Black;
+                lblBack = Color.Silver;
+                keyBack = Color.Silver;
+                title = Color.Goldenrod;
+            }
 
+            this.BackColor = background;
+            lblTitle.ForeColor = title;
+            foreach (Label lbl in letterLabel)
+            {
+                if (lbl.BackColor == Color.DarkGray || lbl.BackColor == Color.Silver)
+                    lbl.BackColor = lblBack;
+                lbl.ForeColor = foreground;
+            }
+
+            foreach (Label lbl in keyLabel)
+            {
+                if (lbl.BackColor == Color.DarkGray || lbl.BackColor == Color.Silver)
+                    lbl.BackColor = keyBack;
+                lbl.ForeColor = foreground;
+            }
         }
 
-
+        private void btnTheme_Click(object sender, EventArgs e)
+        {
+            isDarkTheme = !isDarkTheme;
+            ApplyTheme();
+            btnTheme.Text = isDarkTheme ? "Light Mode" : "Dark Mode";
+            this.ActiveControl = null; //remove focus so enter goes into guess
+        }
 
         public void loadWords()
         {
@@ -224,7 +267,7 @@ namespace wordle
                         {
                             //letter is good :), pos is bad :(
                             letterLabel[startIndex + i].BackColor = Color.Gold;
-                            if(keyLabel[tempGuess[i] - 65].BackColor != Color.Green) 
+                            if (keyLabel[tempGuess[i] - 65].BackColor != Color.Green)
                                 keyLabel[tempGuess[i] - 65].BackColor = Color.Gold;
 
                             matchedInGuess[i] = true;
@@ -252,37 +295,36 @@ namespace wordle
             return (wordList.Contains(tempGuess));
         }
 
-        public void generateLabels()
+        // make buttons clickable, reduce latency by registering double/fast clicks as just clicks
+        private void labelEnter_Click(object sender, EventArgs e)
         {
-            int width = 50;
-            int height = 50;
-            int spacing = 10;
-            int rowWidth = width * 5 + spacing * 4;
+            frmMain_KeyPress(this, new KeyPressEventArgs((char)Keys.Enter));
+        }
+        private void labelEnter_DoubleClick(object sender, EventArgs e)
+        {
+            labelEnter_Click(sender, e);
+        }
 
-            int x = (this.ClientSize.Width - rowWidth) / 2; ///centering the labels; how far from the left
-            int y = 60; /// how far down from the top
+        private void labelBack_Click(object sender, EventArgs e)
+        {
+            frmMain_KeyPress(this, new KeyPressEventArgs((char)Keys.Back));
+        }
 
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    Label lblLetter = new Label();
-                    lblLetter.Text = "";
-                    lblLetter.Font = new Font("Arial", 24, FontStyle.Bold);
-                    lblLetter.Size = new Size(width, height);
-                    lblLetter.TextAlign = ContentAlignment.MiddleCenter;
-                    lblLetter.BorderStyle = BorderStyle.FixedSingle;
-                    lblLetter.BackColor = Color.DarkGray;
-                    lblLetter.Location = new Point(x + j * (width + spacing), y);
-                    lblLetter.ForeColor = Color.White;
+        private void labelBack_DoubleClick(object sender, EventArgs e)
+        {
+            labelBack_Click(sender, e);
+        }
 
+        private void keyLabel_Click(object sender, EventArgs e)
+        {
+            Label lbl = (Label)sender; //differentiate chosen label from other labels
+            char letter = lbl.Text[0];
+            frmMain_KeyPress(this, new KeyPressEventArgs(letter));
+        }
 
-                    this.Controls.Add(lblLetter);
-                    letterLabel.Add(lblLetter);
-                }
-                y += 80; ///80 px between each row
-            }
-
+        private void keyLabel_DoubleClick(object sender, EventArgs e)
+        {
+            keyLabel_Click(sender, e);
         }
     }
 }
