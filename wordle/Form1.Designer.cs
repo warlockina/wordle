@@ -793,11 +793,12 @@
             // 
             btnTheme.Font = new Font("Arial", 10F, FontStyle.Bold);
             btnTheme.ForeColor = SystemColors.ControlText;
-            btnTheme.Location = new Point(12, 19);
+            btnTheme.Location = new Point(13, 19);
             btnTheme.Name = "btnTheme";
             btnTheme.Size = new Size(106, 24);
             btnTheme.TabIndex = 54;
-            btnTheme.Text = "Dark Mode";
+            btnTheme.TabStop = false;
+            btnTheme.Text = "Light Mode";
             btnTheme.UseVisualStyleBackColor = true;
             btnTheme.Click += btnTheme_Click;
             // 

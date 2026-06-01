@@ -61,7 +61,6 @@ namespace wordle
             loadWords();
             this.KeyPress += frmMain_KeyPress;
             this.KeyPreview = true;
-
         }
 
         private void frmMain_Resize(object sender, EventArgs e)
@@ -74,8 +73,9 @@ namespace wordle
             int modif = lblTitle.Size.Width / 2;
             lblTitle.Location = new Point(centerX - modif, lblTitle.Location.Y);
 
-            modif = centerX - btnTheme.Size.Width - btnTheme.Location.X;
-            btnTheme.Location = new Point(centerX - modif + btnTheme.Size.Width, btnTheme.Location.Y);
+            int c = 292; //constant distance between title and button (calculated)
+
+            btnTheme.Location = new Point(centerX - c, btnTheme.Location.Y);
         }
 
         private void ApplyTheme()
@@ -221,6 +221,7 @@ namespace wordle
                 else
                 {
                     MessageBox.Show("Not a word");
+                    this.ActiveControl = null;
                 }
             }
         }
